@@ -2,6 +2,7 @@ var Truck = function(color){
 	
 	// initializer
 	this.color=color;
+	this.fuelLevel=100;
 	this.iconType = 'truck';
 
 	this.create = function(){
@@ -11,6 +12,11 @@ var Truck = function(color){
 		return el;
 	}
 };
+
+Truck.prototype.drive=function(){
+	this.fuelLevel-=5
+	return this.fuelLevel
+}
 
 // child constructor
 var Ambulance = function(){
